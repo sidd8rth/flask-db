@@ -8,4 +8,4 @@ class StoreModel(db.Model):
     # helps to see item associated with it 
     # lazy=dynamic means it is not auto fetch
     # as it might add some overhead
-    items = db.relationship("ItemModel", back_populates="store", lazy="dynamic")
+    items = db.relationship("ItemModel", back_populates="store", lazy="dynamic", cascade="all, delete")

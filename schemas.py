@@ -19,6 +19,7 @@ class PlainStoreSchema(Schema):
 class ItemUpdateSchema(Schema):
     name = fields.Str()
     price = fields.Float()
+    store_id = fields.Int()
 
 
 # this plain schema thing is done here because if we would have kept normal schema then
